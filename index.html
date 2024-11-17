@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Base</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="" alt="">
+    <header class="header">
+        <img class="logo"  src="" alt="">
+        <button class="login-button" id="openModal">Login/Cadastro</button>
+        
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Bem-vindo ao JãoTemPão!</h2>
+            <p>Cada pão, cada porção, uma viagem pela Itália.</p>
+            <br>
+            <br>
+            <a href="#services" class="btn">Conheça Nossos Serviços</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container1">
+            <h2>Sobre Nós</h2>
+            <p>No JãoTemPão, trazemos a autêntica e experiência italiana. Fundado por apaixonados pela cultura e pela gastronomica da Itália, nosso uma padaria oferece receitas tradicionais preparadas com ingredientes frescos e selecionados. Cada refeição é uma viagem pelos sabores italianos, do Norte ao Sul, em um ambiente acolhedor e familiar. Venha se sentir parte da nossa família e descubra o verdadeiro sabor da Itália, onde cada visita se torna uma experiência inesquecível.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Serviços</h2>
+            <div class="service">
+                <img src="" alt="Entrega Rápida">
+                <h3>Entrega Rápida</h3>
+                <p>Receba seus pedidos no menor tempo possível.</p>
+            </div>
+            <div class="service">
+                <img src="" alt="Qualidade Garantida">
+                <h3>Qualidade Garantida</h3>
+                <p>Serviços de alta qualidade para sua satisfação.</p>
+            </div>
+            <div class="service">
+                <img src="" alt="Suporte 24/7">
+                <h3>Suporte 24/7</h3>
+                <p>Estamos aqui para ajudar sempre que precisar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Veja nosso cardapio</h2>
+            <div class="testimonial">
+            <a href="Cardapio.html"><button  class="btn">Cardapio</button></a>
+            </div>
+        </div>
+    </section>
+    <!-- Cabeçalho com botão de Login/Cadastro -->
+    <section id="contact" class="contact">
+        <div class="container2">
+            <h2>Contato</h2>
+            <form action="/enviar-contato" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" required><br>
+                <label for="email">Email:</label>
+                <input type="email"name="email" required><br>
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br>
+                <button type="submit" class="btn2">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="final">
+            <p>&copy; 2024 Tutto Italia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+            <dialog id="cadastroModal">
+            <div id="line"><h2>Cadastro</h2> <h1 class="close"><a href="index.html">X</a></h1></div>
+                <form id="cadastroForm" action="pfl.html">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="(31)99999-9999" oninput="mascaraTelefone(this)" maxlength="15" required>
+                    
+                    <label for="cpf">CPF</label>
+                    <input class="cpf" type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" oninput="mascaraCpf(this)" maxlength="14" required>
+                    
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>  
+    
+                    <button type="submit" onclick="salvarNome()" ">Completar Cadastro</button>   
+                </form> 
+            </dialog>
+    <script src="script.js"></script>
+</body>
+</html>
+
